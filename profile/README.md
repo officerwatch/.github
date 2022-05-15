@@ -6,7 +6,7 @@
 The **web** repo is for the *officer.watch* website. It's a single-page web app that's built with React/JavaScript.
 
 It serves the following roles:
- - Communicate with in-browser wallet to manage a visitor's identity
+ - Communicate with in-browser wallet ( eg. MetaMask ) to manage a users's identity
  - Authenticate user identities by talking directly to the blockchain
  - Fetch copwatch database information directly from GraphQL API
  - Configured to be globally accessible, censor-proof & published to IPFS 
@@ -31,7 +31,9 @@ The **intake** repo is home to an HTTP API that's written in Go.
 
 The purpose of the API is to allow anyone the ability to upload multimedia, documents, and submit other information for volunteers to review and publish to the copwatch database. 
 
-## /datamodel
-The **datamodel** repo is for project contributors to version control the data model planning and other related aspects of information management.
+The data that's stored here is private and not written to the blockchain. It's stored locally in a Redis database on the same server as the Go app.
+
+## /ops
+The **ops** repo is for project contributors to version control the data model planning and other operations/planning related aspects of information management.
 
 No functional part of the running system resides in this repo. It's strictly for planning purposes only.
